@@ -2,7 +2,7 @@
 	/* Novidades PHP 7*/
 
 
-	Aula 1 Introdução
+	//Aula 1 Introdução
 
 	declare(strict_types=1);
 
@@ -22,7 +22,7 @@
 	/******************************************************************************************/
 
 	
-	Aula 2 Declaração de Tipos
+	//Aula 2 Declaração de Tipos
 
 	class ClassE{
 		public function get(float $a){
@@ -222,8 +222,7 @@
 	$blog->description = "texto.....";
 	echo $blog;
 	file_put_contents("data.save", serialize([$user,$blog]));
-	*/
-	/*
+	
 	$data = file_get_contents("data.save");
 	$data = unserialize($data,["allowed"=>["User"]]);
 	foreach ($data as $obj) {
