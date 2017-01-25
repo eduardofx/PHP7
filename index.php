@@ -2,7 +2,6 @@
 	/* Novidades PHP 7*/
 
 
-	/*
 	Aula 1 Introdução
 
 	declare(strict_types=1);
@@ -18,11 +17,11 @@
 
 	foreach ($php7("news in php7") as $p) {
 		echo $p."\n";
-	}*/
+	}
 
 	/******************************************************************************************/
 
-	/*
+	
 	Aula 2 Declaração de Tipos
 
 	class ClassE{
@@ -34,13 +33,13 @@
 
 	$e = new ClassE;
 	echo $e->get(5.8);
-	*/
+	
 
 
 	/******************************************************************************************/
 
 
-	/* 	Aula 3	Modo Strict Types
+	/* 	Aula 3	Modo Strict Types*/
 
 	declare(strict_types=1);
 
@@ -50,11 +49,11 @@
 
 	echo func3(4);
 
-	*/
+	
 
 	/******************************************************************************************/	
 
-	/* 	Aula 4	Declaração de tipos de retorno 
+	/* 	Aula 4	Declaração de tipos de retorno */
 
 	declare(strict_types=1);
 
@@ -70,24 +69,24 @@
 	}	
 	$a =  new class4;
 	echo $a->getInt(4);
-	*/
+	
 
 
 	/******************************************************************************************/	
 
 
-	/* 	Aula 5	Operador Null Coalescing 
+	/* 	Aula 5	Operador Null Coalescing */
 
 	// Se estivar vazio, declara vazio
 
 	$a = $_GET['a'] ?? Null;
 	echo $a;
-	*/
+	
 
 	/******************************************************************************************/	
 
 
-	/* 	Aula 6 Operador Spaceship 
+	/* 	Aula 6 Operador Spaceship */
 
 	// Se for igual "0" - esquerda maior "1" - direita maior "-1"
 
@@ -107,24 +106,24 @@
 	}
 	
 	echo int6(2,2);
-	*/
+	
 
 
 	/******************************************************************************************/	
 
 
-	/* Aula 6 Definição de constante com Arrays 
+	/* Aula 6 Definição de constante com Arrays */
 
 	define('ANIMALS', ['dog','cat','bird']);
 
 	echo ANIMALS[2];
-	*/
+	
 
 
 	/******************************************************************************************/	
 
 
-	/* Aula 7 Classes anônimas
+	/* Aula 7 Classes anônimas*/
 
 	interface Logger{
 		public function log(string $msg);
@@ -150,12 +149,12 @@
 		}
 	}
 
-	/*
+	
 	$app = new App;
 	$app->setLogger(new Logg);
 	var_dump($app->getLogger());
-	*/
-	/*
+
+
 	$app = new App;
 	$app->setLogger(new class implements Logger{
 		public function log(string $msg){
@@ -164,13 +163,13 @@
 		}
 	});
 	var_dump($app->getLogger());
-	*/
+	
 
 	/******************************************************************************************/	
 
 
 	/* Aula 8 Closure Call*/
-	/*
+	
 	class ClassA{
 		private $x = 1;
 	}
@@ -185,12 +184,13 @@
 	//php7
 	$getX2 = function(){ return $this->x;};
 	echo $getX2->call(new ClassA);
-	*/
+	
 
 	/******************************************************************************************/	
 
 
-	/* Aula 8 Unserialize filtrada
+	/* Aula 8 Unserialize filtrada*/
+	
 
 	class User{
 		public $name;
@@ -210,7 +210,7 @@
 			return "Blog: {$this->title}, Description: {$this->description}";
 		}
 	}
-	/*
+	
 	$user = new User;
 	$user->name = "eduardo";
 	$user->email = "eduardo@email.com";
@@ -230,13 +230,13 @@
 		if(is_object($obj)){
 			echo $obj;
 		}
-	}*/
+	}
 
 	/******************************************************************************************/	
 
 	/* Aula 9 Declaração de namespaces*/
 
-	/*require_once __DIR__."/vendor/autoload.php";
+	require_once __DIR__."/vendor/autoload.php";
 	
 	//use App\ClassA;
 	//use App\ClassB;
@@ -251,19 +251,19 @@
 	echo $b;
 
 	$c = new C;
-	echo $c;*/
+	echo $c;
 
 	/******************************************************************************************/	
 
 	/* Aula 9 Função intdiv*/
 
-	//print_r(intdiv(43.5,2));
+        print_r(intdiv(43.5,2));
 
 	/******************************************************************************************/	
 
 	/* Aula 10 Nova arquitetura para Exception e Error*/
 
-	/*
+	
 	interface MyPackageThrowable extends Throwable {}
 
 	class MyPackageException extends Error implements MyPackageThrowable{}
@@ -283,4 +283,4 @@
 		echo "Exception: ".$e->getMessage();
 	}catch(Error $e){
 		echo "Erro: ".$e->getMessage();
-	}*/
+	}
